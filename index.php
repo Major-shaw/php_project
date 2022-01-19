@@ -1,18 +1,21 @@
 <?php
+// require_once "db.php";
 
 if (isset($_POST['submit'])) {
   $name = mysqli_real_escape_string($conn, $_POST['name']);
   $email = mysqli_real_escape_string($conn, $_POST['email']);
   $mobile = mysqli_real_escape_string($conn, $_POST['mobile']);
 
-  if (!preg_match("/^[a-zA-Z ]+$/",$name)) {
-  $name_error = "Name must contain only alphabets and space";
+  if (!preg_match("/^[a-zA-Z ]+$/", $name)) {
+    $name_error = "Name must contain only alphabets and space";
   }
+
   if(!filter_var($email,FILTER_VALIDATE_EMAIL)) {
-  $email_error = "Please Enter Valid Email ID";
+    $email_error = "Please Enter Valid Email ID";
   }
+
   if(strlen($mobile) < 10) {
-  $mobile_error = "Mobile number must be minimum of 10 characters";
+    $mobile_error = "Mobile number must be minimum of 10 characters";
   }
 }
 ?>
