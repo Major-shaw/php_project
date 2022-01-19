@@ -1,5 +1,4 @@
 <?php
-// require_once "db.php";
 
 if (isset($_POST['submit'])) {
   $name = mysqli_real_escape_string($conn, $_POST['name']);
@@ -15,13 +14,6 @@ if (isset($_POST['submit'])) {
   if(strlen($mobile) < 10) {
   $mobile_error = "Mobile number must be minimum of 10 characters";
   }
-  // if(mysqli_query($conn, "INSERT INTO users(name, email, mobile) VALUES('" . $name . "', '" . $email . "', '" . $mobile . "')")) {
-  //   exit();
-  // }
-  // else {
-  //   echo "Error: " . mysqli_error($conn);
-  // }
-  // mysqli_close($conn);
 }
 ?>
 

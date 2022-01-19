@@ -21,8 +21,6 @@
             echo "Error: " . mysqli_error($conn);
           }
           mysqli_close($conn);
-          // Performing insert query execution
-          // here our table name is college
         ?>
         <form action="index.php" method="POST">
           <input type="submit" class="btn btn-primary" value="Go Back"/>
