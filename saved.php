@@ -13,7 +13,7 @@
           $name = mysqli_real_escape_string($conn, $_POST['name']);
           $email = mysqli_real_escape_string($conn, $_POST['email']);
           $mobile = mysqli_real_escape_string($conn, $_POST['mobile']);
-          if(mysqli_query($conn, "INSERT INTO users(name, email, mobile) VALUES('" . $name . "', '" . $email . "', '" . $mobile . "')")) {
+          if(mysqli_query($conn, "INSERT INTO users(name, email, mobile) VALUES('$name', '$email', '$mobile')")) {
             echo "<h3>Data stored in the database successfully.</h3>";
             echo nl2br("\n$name\n $email\n $mobile\n");
           }
